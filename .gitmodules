@@ -1,6 +1,6 @@
 [submodule "core"]
 	path = core
-	url = http://mosra.archerfx.cz/git/map2x-core.git
+	url = git://github.com/mosra/map2x-core.git
 [submodule "qt"]
 	path = qt
-	url = http://mosra.archerfx.cz/git/map2x-qt.git
+	url = git://github.com/mosra/map2x-qt.git
