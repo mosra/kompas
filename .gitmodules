@@ -4,3 +4,6 @@
 [submodule "qt"]
 	path = qt
 	url = git://github.com/mosra/map2x-qt.git
+[submodule "plugins"]
+	path = plugins
+	url = git://github.com/mosra/map2x-plugins.git
