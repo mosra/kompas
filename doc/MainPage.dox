@@ -1,0 +1,17 @@
+/** @mainpage
+
+<p><strong>%Map2X</strong> is a plugin-based application written in C++ and
+released under LGPLv3 license. It provides core functionality for downloading
+maps from servers, loading and saving them from/to files or archives, converting
+coordinates, loading and saving tracks, points of interest and many more.</p>
+@section MPGoals Goals
+<ul>
+<li>Lightweight C++ library with minimal dependecies for maximal
+performance and easy portability to many systems (embedded systems, gaming
+consoles, mobile phones etc.)</li>
+<li>Plugin-based system for easy extensibility and scalability for different
+needs</li>
+<li>GUI created in Qt and SDL for systems with different performance</li>
+</ul>
+
+ */
