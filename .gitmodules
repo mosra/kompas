@@ -10,3 +10,6 @@
 [submodule "plugins-nonfree"]
 	path = plugins-nonfree
 	url = git://github.com/mosra/map2x-plugins-nonfree.git
+[submodule "sdl"]
+	path = sdl
+	url = git://github.com/mosra/map2x-sdl.git
