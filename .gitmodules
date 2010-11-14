@@ -13,3 +13,6 @@
 [submodule "sdl"]
 	path = sdl
 	url = git://github.com/mosra/map2x-sdl.git
+[submodule "toolchains"]
+	path = toolchains
+	url = git://github.com/mosra/toolchains.git
