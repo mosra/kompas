@@ -1,18 +1,18 @@
 [submodule "core"]
 	path = core
-	url = git://github.com/mosra/map2x-core.git
+	url = git://github.com/mosra/kompas-core.git
 [submodule "qt"]
 	path = qt
-	url = git://github.com/mosra/map2x-qt.git
+	url = git://github.com/mosra/kompas-qt.git
 [submodule "plugins"]
 	path = plugins
-	url = git://github.com/mosra/map2x-plugins.git
+	url = git://github.com/mosra/kompas-plugins.git
 [submodule "plugins-nonfree"]
 	path = plugins-nonfree
-	url = git://github.com/mosra/map2x-plugins-nonfree.git
+	url = git://github.com/mosra/kompas-plugins-nonfree.git
 [submodule "sdl"]
 	path = sdl
-	url = git://github.com/mosra/map2x-sdl.git
+	url = git://github.com/mosra/kompas-sdl.git
 [submodule "toolchains"]
 	path = toolchains
 	url = git://github.com/mosra/toolchains.git
