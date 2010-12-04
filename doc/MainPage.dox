@@ -1,6 +1,6 @@
 /** @mainpage
 
-<p><strong>%Map2X</strong> is a plugin-based application written in C++ and
+<p><strong>%Kompas</strong> is a plugin-based application written in C++ and
 released under LGPLv3 license. It provides core functionality for downloading
 maps from servers, loading and saving them from/to files or archives, converting
 coordinates, loading and saving tracks, points of interest and many more.</p>

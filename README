@@ -3,8 +3,12 @@ aggregate more projects into one repository, so the developer doesn't need
 to manage every project separately.
 
 This repository contains these projects:
-- map2x-core    - Core Map2X library
-- map2x-qt      - Map2X GUI written in Qt
+- kompas-core               - Core Kompas library
+- kompas-qt                 - Kompas GUI written in Qt
+- kompas-sdl                - Kompas GUI written in SDL
+- kompas-plugins            - Kompas plugins
+- kompas-plugins-nonfree    - Non-free Kompas plugins
+- kompas-artwork            - Complete Kompas artwork
 
 INITIALIZATION:
 
