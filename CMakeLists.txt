@@ -64,5 +64,14 @@ set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "Kompas")
 set(CPACK_NSIS_EXTRA_INSTALL_COMMANDS "IfFileExists \\\"$INSTDIR\\\\Uninstall.exe\\\" 0 +2
         ExecWait '\\\"$INSTDIR\\\\Uninstall.exe\\\" /S _?=$INSTDIR'")
 
+# Desktop shortcut
+set(CPACK_NSIS_EXTRA_INSTALL_COMMANDS "
+    CreateShortCut \\\"$DESKTOP\\\\Kompas.lnk\\\" \\\"$INSTDIR\\\\kompas-qt.exe\\\"
+")
+
+set(CPACK_NSIS_EXTRA_UNINSTALL_COMMANDS "
+    Delete \\\"$DESKTOP\\\\Kompas.lnk\\\"
+")
+
 # Finally include CPack (this must be at the end)
 include(CPack)
