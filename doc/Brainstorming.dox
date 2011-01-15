@@ -1,16 +1,18 @@
 /** @page CoreBrainstorming Brainstorming (links, etc.)
 Tile servers:
-- http://code.google.com/intl/cs-CZ/apis/maps/documentation/javascript/v2/overlays.html#Google_Maps_Coordinates
 - http://qmapcontrol.svn.sourceforge.net/viewvc/qmapcontrol/QMapControl/src/
 - http://spatialreference.org/ref/sr-org/98/
-- http://www.freemap.sk/
 - http://wiki.openstreetmap.org/wiki/Mapquest
-- http://maps.ovi.com/
-- http://hikebikemap.de/
 - http://www.wikimapia.org/
 
+Weather:
+- http://www.eutmetsat.int/
+- http://www.chmu.cz/
+
+Elevation data:
+- http://www2.jpl.nasa.gov/srtm/
+
 Historical maps:
-- http://www.kdedevelopers.org/node/4322
 - http://www.loc.gov/index.html
 - http://commons.wikimedia.org/wiki/Historical_maps
 
@@ -18,10 +20,6 @@ Mapy.cz new api:
 - http://mapy.cz.sblog.cz/2010/07/14/37
 - http://beta.api.mapy.cz/doc/index.html (documentation)
 - samples: http://beta.api.mapy.cz/, http://ondras.zarovi.cz/smap/
-
-Distance between two WGS84 coordinates:
-- http://openmap.bbn.com/mailArchives/openmap-users/2002-03/0666.html (+ zip dl)
-- http://www.movable-type.co.uk/scripts/latlong-vincenty.html
 
 POI etc.:
 - http://www.geonames.org/about.html
