@@ -9,6 +9,9 @@ add_subdirectory(core)
 add_subdirectory(qt)
 #add_subdirectory(sdl)
 add_subdirectory(plugins)
+
+# Set this so CMake doesn't try to find installed plugins
+set(KOMPASPLUGINS_FOUND TRUE)
 add_subdirectory(plugins-nonfree)
 
 if(BUILD_TESTS)
