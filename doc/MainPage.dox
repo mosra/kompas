@@ -14,4 +14,38 @@ needs</li>
 <li>GUI created in Qt and SDL for systems with different performance</li>
 </ul>
 
- */
+@section GettingStarted Getting started
+
+%Kompas is divided into sections, defined by few namespaces:
+
+- Kompas::Utility - classes for acessing configuration files, directory listing,
+  resource compiling etc.
+- Kompas::PluginManager - the heart of %Kompas, provides loading, unloading and
+  instancing of plugins
+- Kompas::Core - base classes and plugin interfaces for map data loading,
+  coordinate conversion etc.
+- Kompas::QtGui - user interface written in Qt
+- Kompas::Sdl - user interface written in SDL
+- Kompas::Plugins - all plugins
+
+@subsection PluginDevelopment Plugin development
+First thing you probably would want to do is to develop some plugin. You can
+start with basic introduction and tutorial @ref PluginManagement
+"how plugins work" (from plugin developer point of view). Here is list of
+plugin interfaces for which you can develop your plugin:
+
+- Kompas::Core::AbstractRasterModel - plugins providing access to online or
+  offline maps (for example
+  @ref Kompas::Plugins::OpenStreetMapRasterModel "Open Street Map" plugin)
+- Kompas::Core::AbstractProjection - plugins for computation and conversion of
+  map coordinates (for example
+  @ref Kompas::Plugins::StereographicProjection "Stereographic projection"
+  plugin)
+- Kompas::QtGui::AbstractMapView - Map viewer widgets for Qt GUI (for example
+  @ref Kompas::Plugins::GraphicsMapView "2D map view" plugin)
+- Kompas::QtGui::AbstractTool - Tool plugins for Qt GUI (for
+  example @ref Kompas::Plugins::DistanceMeterTool "Distance meter" plugin)
+
+List of all plugins is in Kompas::Plugins namespace documentation.
+
+*/
