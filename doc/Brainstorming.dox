@@ -9,6 +9,11 @@ Weather:
 - http://www.eutmetsat.int/
 - http://www.chmu.cz/
 
+Webcams:
+- http://www.onlinewebcameras.com/
+- http://hardware.slashdot.org/story/11/01/18/1829230/Unsecured-IP-Cameras-Accessible-To-Everyone
+- http://tanidvr.sourceforge.net/
+
 Elevation data:
 - http://www2.jpl.nasa.gov/srtm/
 
@@ -26,6 +31,7 @@ POI etc.:
 - icons: http://aur.archlinux.org/packages.php?ID=38879 (OSM)
 - http://www.poi.cz
 - http://openspot.googlelabs.com/
+- Last.FM - music events
 
 GPS:
 - http://www.archlinux.org/packages/community/i686/gpsd/
