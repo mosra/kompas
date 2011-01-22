@@ -1,4 +1,4 @@
-version=0.1
+version=0.1.1
 
 rm -f kompas-${version}.tar{,.gz} core.tar qt.tar plugins.tar plugins-nonfree.tar
 

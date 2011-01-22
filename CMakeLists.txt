@@ -9,6 +9,9 @@ add_subdirectory(core)
 add_subdirectory(qt)
 #add_subdirectory(sdl)
 add_subdirectory(plugins)
+
+# Set this so CMake doesn't try to find installed plugins
+set(KOMPASPLUGINS_FOUND TRUE)
 add_subdirectory(plugins-nonfree)
 
 if(BUILD_TESTS)
@@ -24,7 +27,7 @@ set(CPACK_PACKAGE_NAME "Kompas")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Portable navigation system.")
 set(CPACK_PACKAGE_VERSION_MAJOR "0")
 set(CPACK_PACKAGE_VERSION_MINOR "1")
-set(CPACK_PACKAGE_VERSION_PATCH "0")
+set(CPACK_PACKAGE_VERSION_PATCH "1")
 
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/COPYING.LESSER")
 
