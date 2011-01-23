@@ -61,6 +61,17 @@ Compilation, installation
 If you want to build also unit tests (which are not built by default),
 pass -DBUILD_TESTS=True to CMake. Unit tests use QtTest framework.
 
+Generating documentation
+------------------------
+
+Kompas is documented via Doxygen. All you need is to have Doxygen, TeX (for
+mathematic formulas) and GraphViz (for dependency graphs) installed. Then run
+
+    doxygen
+
+in this directory (where the Doxyfile is). Resulting HTML documentation will be
+in build/doc/. Just open index.html and there it is!
+
 CONTACT
 =======
 
