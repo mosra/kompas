@@ -1,0 +1,84 @@
+/** @page Building Building %Kompas
+
+%Kompas can be built in many ways. You can either compile it manually (as described in READMEs) or use already prepared packaging files:
+
+- @ref BuildingArch "ArchLinux"
+- @ref BuildingRPM "RPM-based distributions" (currently tested are SUSE, Fedora, Mandriva)
+- @ref BuildingWin "Microsoft Windows"
+
+Minimal set of tools required for building is:
+
+- CMake >= 2.6
+- C++ compiler (e.g. GCC)
+
+@section BuildingHierarchy Building hierarchy
+%Kompas is divided into separate packages / repositories:
+
+- Core library
+- Qt UI
+- SDL UI
+- Plugins
+- Non-free plugins
+
+Recommended way of building is to compile and install each package at once, but it's also possible to compile and install everything together. The Core library is base, on which depends all other packages. Complete package hierarchy:
+@dot
+digraph hierarchy {
+    node [shape=record, height=0.25, fontname=Helvetica, fontsize=8];
+    edge [arrowtail="normal", color="blue", fontname=Helvetica, fontsize=8, style="solid", dir=back];
+    core [label="Core"];
+    qt [label="Qt interface"];
+    sdl [label="Mobile SDL interface"];
+    plugins [label="Plugins"];
+    plugins_nonfree [label="Non-free plugins"];
+    core -> qt;
+    core -> sdl;
+    core -> plugins;
+    plugins -> plugins_nonfree;
+
+    edge [color="#cc9900", style="dashed"];
+    qt -> plugins;
+    qt -> plugins_nonfree;
+    sdl -> plugins;
+    sdl -> plugins_nonfree;
+}
+@enddot
+Plugins and non-free plugins contains also plugins for Qt and SDL interfaces. They are optional and are built only if corresponding UI package is installed.
+
+@section BuildingArch Building ArchLinux packages
+In @c package/archlinux directory are two PKGBUILDs - one for stable version and one for Git development build.
+
+@section BuildingRPM Building RPM packages
+Every package contains @c spec files for RPM-based distributions in @c package/rpm/ directory. In addition you will need @c rpm-build package and @c ~/.rpmmacros file, which contains at least this:
+<pre>%%_topdir /directory/where/to/store/rpms
+%%_tmppath /directory/where/to/do/compilation
+%%packager Your Name <your@email.com>
+</pre>
+First you need to download or create source tarballs. Source tarballs can be downloaded from GitHub (URL of every package is in spec file). If you have cloned the superproject repository, in subdirectory @c package/ there is an file @c make-github-like-archives.sh, which generates exactly the same tarballs.
+
+The downloaded or generated tarballs must be moved or copied to @c %{_topdir}/SOURCES directory, so @c rpmbuild can find them.
+
+When you have the sources, go to <tt>package/rpm/</tt> directory of Core package and run this:
+<pre>rpmbuild -bb kompas-core.spec
+</pre>
+
+This will compile and generate library and development RPM for Core library in @c %{_topdir}/RPMS. Another packages can be built similarly. When building another packages depending on it, you will need both library and development RPM installed.
+
+@section BuildingWin Building Windows installer
+@note This guide is mainly for crosscompiling from ArchLinux.
+
+Windows installer is different from Linux packages, as it currently installs everything together as one package. The build is done from superproject repository. In addition you will need these packages:
+
+ - mingw32-gcc
+ - mingw32-qt
+ - nsis
+
+CMake supports NSIS packaging, so the whole installer (everything bundled together) can be build with this:
+<pre>
+mkdir build-win
+cd build-win
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../toolchains/archlinux/Qt4-mingw32.cmake -DCMAKE_INSTALL_PREFIX=/
+make
+make package
+</pre>
+If everything goes well, in @c build-win/ directory is an finished @c *.exe installer.
+*/

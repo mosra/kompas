@@ -14,7 +14,11 @@ needs</li>
 <li>GUI created in Qt and SDL for systems with different performance</li>
 </ul>
 
-@section GettingStarted Getting started
+@section BuildingLink Building Kompas
+
+Guide @ref Building "how to build Kompas" on different platforms.
+
+@section GettingStarted Getting started with development
 
 %Kompas is divided into sections, defined by few namespaces:
 
