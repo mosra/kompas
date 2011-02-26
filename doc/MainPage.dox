@@ -11,7 +11,7 @@ performance and easy portability to many systems (embedded systems, gaming
 consoles, mobile phones etc.)</li>
 <li>Plugin-based system for easy extensibility and scalability for different
 needs</li>
-<li>GUI created in Qt and SDL for systems with different performance</li>
+<li>GUI created in Qt and SDL for systems with various performance</li>
 </ul>
 
 @section BuildingLink Building Kompas
@@ -20,7 +20,7 @@ Guide @ref Building "how to build Kompas" on different platforms.
 
 @section GettingStarted Getting started with development
 
-%Kompas is divided into sections, defined by few namespaces:
+%Kompas is divided into a few hierarchically ordered sections. Every section resides in its own namespace. The complete hierarchy is described in @ref Architecture. List of all namespaces:
 
 - Kompas::Utility - classes for acessing configuration files, directory listing,
   resource compiling etc.
@@ -39,12 +39,17 @@ start with basic introduction and tutorial @ref PluginManagement
 plugin interfaces for which you can develop your plugin:
 
 - Kompas::Core::AbstractRasterModel - plugins providing access to online or
-  offline maps (for example
+  offline raster maps (for example
   @ref Kompas::Plugins::OpenStreetMapRasterModel "Open Street Map" plugin)
+- Kompas::Core::AbstractVectorModel - plugins providing access to online or
+  offline vector maps, points of interest, geotagged images etc.
+- Kompas::Core::AbstractVectorPresenter - plugins for rendering different types
+  of vector maps
 - Kompas::Core::AbstractProjection - plugins for computation and conversion of
   map coordinates (for example
   @ref Kompas::Plugins::StereographicProjection "Stereographic projection"
   plugin)
+- Kompas::Core::AbstractCache - plugins for caching downloaded data
 - Kompas::QtGui::AbstractMapView - Map viewer widgets for Qt GUI (for example
   @ref Kompas::Plugins::GraphicsMapView "2D map view" plugin)
 - Kompas::QtGui::AbstractTool - Tool plugins for Qt GUI (for
