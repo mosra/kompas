@@ -65,8 +65,9 @@ When you have the sources, go to <tt>package/rpm/</tt> directory of Core package
 This will compile and generate library and development RPM for Core library in @c %{_topdir}/RPMS. Another packages can be built similarly. When building another packages depending on it, you will need both library and development RPM installed.
 
 @section BuildingDEB Building DEB packages
-Every package contains @c debian/ directory with all files needed for building Debian packages. In addition you will need @c dpkg-dev pacakge. Building is easy, just change directory to package root (the directory which contains @c debian/ subdirectory) and run:
-<pre>dpkg-buildpackage
+Every package contains @c debian/ directory with all files needed for building Debian packages. In addition you will need @c dpkg-dev pacakge. Building is easy, just change directory to package root, copy @c package/debian directory there and run @c dpkg-buildpackage:
+<pre>cp package/debian .
+dpkg-buildpackage
 </pre>
 
 This will compile binary and development packages, which will then appear in parent directory. When building another packages depending on this package, you will need both library and development DEB installed.
