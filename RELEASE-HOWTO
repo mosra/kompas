@@ -1,0 +1,95 @@
++------------------------------------------------------------------------------+
+|          "DON'T SCREW IT UP, PLEASE" MANUAL FOR RELEASING NEW VERSION        |
++------------------------------------------------------------------------------+
+
+PRE-CHECK:
+
+* If plugins/ or plugins-nonfree/ contains any plugin depending on Qt GUI, add
+  kompas-qt to package dependencies:
+    plugins*/README.md
+    plugins*/package/archlinux/kompas-plugins*/PKGBUILD
+    plugins*/package/archlinux/kompas-plugins*-git/PKGBUILD
+    plugins*/package/rpm/kompas-plugins*.spec
+        (Requires, Requires -devel, BuildRequires)
+    plugins*/package/debian/control
+        (Depends, Depends -dev, Build-Depends)
+    plugins*/package/debian-obs/kompas-plugins.dsc
+        (Build-Depends)
+
+* If any CMake module was changed, run
+    cd package && ./sync-modules.sh
+
+================================================================================
+
+0.  Test at least on Windows (see #11) and Arch:
+    cd package && sudo ./build.sh
+
+1.  Bump version numbers:
+    CMakeLists.txt
+    core/CMakeLists.txt (KOMPAS_CORE_LIBRARY_VERSION)
+    qt/CMakeLists.txt (+ KOMPAS_QT_LIBRARY_VERSION)
+
+2.  Commit / and qt/:
+    git commit -m "Bump version to $version."
+
+3.  Tag new version in artwork/, core/, qt/, plugins/ and plugins-nonfree/:
+    git tag -a v$version -m "Version $version."
+
+    Checkout to right branch on /, stage submodule hashes and commit it too.
+
+4.  Add changelog entries:
+    */package/debian/changelog
+    */package/rpm/kompas-*.changes
+    */package/rpm/kompas-*.rpm
+
+5.  Bump version numbers:
+    package/changelog.sh (TWICE!)
+    package/make-github-like-archive.sh (TWICE!)
+    */package/rpm/kompas-*.spec
+    */package/debian-obs/kompas-*.dsc
+    */package/archlinux/kompas-*/PKGBUILD
+
+6.  EITHER push to GitHub, download:
+    wget https://github.com/mosra/kompas-*/tarball/v$version/kompas-*-$version.tar.gz
+
+    OR create archives with:
+    cd package && ./make-github-like-archive.sh
+
+7.  Update md5sums and prefix (according to tarballs) in:
+    */package/archlinux/kompas-*/PKGBUILD
+    */package/rpm/kompas-*.spec (TWICE!)
+
+8.  Commit update to OBS:
+    cp -L */package/debian-obs/* $obs/*/
+    cp */package/rpm/kompas-*.{changes,spec} $obs/*/
+    cp package/kompas-*-$version.tar.gz $obs/*/
+    osc commit -m "New upstream version $version."
+
+9.  If not already, push v$version to GitHub, test and update packages in AUR.
+
+10. Create Windows installer:
+    mkdir -p build-win
+    cd build-win
+    cmake .. \
+        -DCMAKE_TOOLCHAIN_FILE=../toolchains/archlinux/Qt4-mingw32.cmake \
+        -DCMAKE_INSTALL_PREFIX=/
+    make -j5 && make package
+
+11. Wait for OBS packages to build, download them, remove release number and
+    insert them with Windows installer into blog DB:
+    cd package
+    ./download-obs.sh
+    ./mysql-source-arch-win.sh
+
+12. If OBS and AUR packages succeeded, commit / and */ with:
+    git commit -m "Updated packages to $version."
+
+13. Generate full changelog for release announcement:
+    cd package && ./changelog.sh > $blog/kompas/kompas-$version-changelog.txt
+
+14. Write release announcement.
+
+15. Add $version to $blog/inc/download-kompas.php
+
+16. Shorten changelog from release announcement and update Qt-Apps.org project
+    page.
