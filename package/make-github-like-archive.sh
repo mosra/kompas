@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rev=v0.1.1
-revas=v0.1.1
+rev=v0.1.2
+revas=v0.1.2
 
 for i in core qt plugins plugins-nonfree ; do
     cd ../$i

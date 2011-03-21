@@ -1,6 +1,6 @@
 #!/bin/bash
 prev=v0.1.1
-curr=0.1
+curr=v0.1.2
 
 git_log() {
     cd ../$1
