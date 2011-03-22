@@ -23,6 +23,7 @@ Elevation data:
 Historical maps:
 - http://www.loc.gov/index.html
 - http://commons.wikimedia.org/wiki/Historical_maps
+- http://www.davidrumsey.com/
 
 Mapy.cz new api:
 - http://mapy.cz.sblog.cz/2010/07/14/37
@@ -38,6 +39,7 @@ POI etc.:
 
 GPS:
 - http://www.archlinux.org/packages/community/i686/gpsd/
+- GPS logging, GPX export, track stats (length, duration, elevation and pace of total track, rise, descent, flat), graphs (elevation profile), colored vector map (pace, elevation), use averaged values for smooth results
 
 Navigation software:
 - http://oss.wayfinder.com/
@@ -48,4 +50,7 @@ Routing:
 - http://yournavigation.org/
 - http://lists.openstreetmap.org/pipermail/talk/2010-July/051405.html
 - http://nienhueser.de/blog/?p=137
+
+Social networks:
+- http://dailymile.com/ gpx workout upload
  */
