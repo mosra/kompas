@@ -3,10 +3,14 @@ Tile servers:
 - http://qmapcontrol.svn.sourceforge.net/viewvc/qmapcontrol/QMapControl/src/
 - http://spatialreference.org/ref/sr-org/98/
 - http://www.wikimapia.org/
+- http://www.networkworld.com/community/blog/nasa-satellite-snaps-rare-cloud-free-emerald-
 
 Planets:
 - http://bibliodyssey.blogspot.com/2008/04/channelling-martian-maps.html
 - http://wms.lroc.asu.edu/lroc_browse/view/wac_nearside , http://science.slashdot.org/story/11/03/03/1541212/A-Half-Gigabyte-View-of-the-Moon?from=rss
+- http://www.mapaplanet.org/
+- http://messenger.jhuapl.edu/the_mission/gallery.html
+- http://www.sns.ias.edu/~starlab/index.html (?)
 
 Weather:
 - http://www.eutmetsat.int/
@@ -16,6 +20,12 @@ Webcams:
 - http://www.onlinewebcameras.com/
 - http://hardware.slashdot.org/story/11/01/18/1829230/Unsecured-IP-Cameras-Accessible-To-Everyone
 - http://tanidvr.sourceforge.net/
+
+360, street view:
+- http://www.360stupnu.cz/
+- http://360.sympact.cz/
+- http://aktualne.centrum.cz/domaci/grafika/2011/03/18/sjezd-cssd-panorama/ ;-)
+- http://www.panoramas.cz/virtualni-prohlidky-360.html
 
 Elevation data:
 - http://www2.jpl.nasa.gov/srtm/
@@ -34,6 +44,7 @@ POI etc.:
 - icons: http://aur.archlinux.org/packages.php?ID=38879 (OSM)
 - http://www.poi.cz
 - http://openspot.googlelabs.com/
+- http://www.filmovamista.cz/obsah/content/get_gps_places.php?neX=170&neY=80&swX=-170&swY=-80 (only some part is geotagged here, others must be parsed from HTML)
 - Last.FM - music events
 
 GPS:
