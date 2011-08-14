@@ -30,6 +30,7 @@ Webcams:
 - http://www.panoramas.cz/virtualni-prohlidky-360.html
 - http://www.palacflora.cz/najdi-si-svuj-obchod
 - http://aktualne.centrum.cz/grafika/2011/06/01/zlata-ulicka-na-prazskem-hrade-po-rekonstrukci/
+- http://360vr.com/2011/06/22-discovery-flight-deck-opf_6236/index.html + others
 
 Elevation data:
 - http://www2.jpl.nasa.gov/srtm/
@@ -51,6 +52,8 @@ POI etc.:
 - http://openspot.googlelabs.com/
 - http://www.filmovamista.cz/obsah/content/get_gps_places.php?neX=170&neY=80&swX=-170&swY=-80 (only some part is geotagged here, others must be parsed from HTML)
 - Last.FM - music events
+- http://www.cablemap.info/
+- http://www.flightradar24.com/
 
 GPS:
 - http://www.archlinux.org/packages/community/i686/gpsd/
