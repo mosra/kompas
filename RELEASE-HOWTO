@@ -27,7 +27,7 @@ PRE-CHECK:
 1.  Bump version numbers:
     CMakeLists.txt
     core/CMakeLists.txt (KOMPAS_CORE_LIBRARY_VERSION)
-    qt/CMakeLists.txt (+ KOMPAS_QT_LIBRARY_VERSION)
+    qt/CMakeLists.txt (KOMPAS_QT_VERSION + KOMPAS_QT_LIBRARY_VERSION)
 
 2.  Commit / and qt/:
     git commit -m "Bump version to $version."
